@@ -43,8 +43,8 @@ module.exports.run = async(client, message, args) => {
   .addField(`<:welcomer:751370986695163918> | Welcomer`, `${prefix}help welcomer, See all the **Welcomer** commands available.`, true)
   .addField(`<:fun:751371340271058974> | Fun`, `${prefix}help fun, See all the **Fun** commands available.`, true)
   .addField(`<a:economy:751371265121452072> | Economy`, `${prefix}help economy, See all the **Economy** commands available.`, true)
-   .setColor(client.colors.theme);
-   .setFooter(`Halloween Version`)
+   .setColor(client.colors.theme)
+   .setFooter(`Halloween Version`);
   message.channel.send(embed).catch(console.log);
   } else if(args[0] === 'utility'.toLowerCase()) {
     em.addField(`<:rules:739323550116085792> | Utility Commands`, "``" + prefix + utility.join(`\`\`, \`\`${prefix}`) + "``")
