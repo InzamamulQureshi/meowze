@@ -27,5 +27,6 @@ ${message.author.username} is smiling :D`
 
 exports.help = {
   name: "smile",
-  aliases: ["happy"]
+  aliases: ["happy"],
+  category: "Action"
 };
