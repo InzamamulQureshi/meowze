@@ -15,7 +15,7 @@ module.exports = async(client, m,  newM) => {
   let ch = await client.db.get(`modlog_${m.guild.id}`);
   let modlogembed = new discord.MessageEmbed()
   .setTitle("Message Edited")
-  .setDescription(`Edited in: ${chn}\nMessage Author: ${m.author.tag}\nPrevious Text: ${m}\nEdited Text: ${newM}`)
+  .setDescription(`**Edited in:** ${chn}\n**Message Author:** ${m.author.tag}\n**Previous Text:** ${m}\n**Edited Text:** ${newM}`)
   .setColor(client.colors.theme)
   .setFooter(`User ID: ${m.id} | Message ID: ${newM.id}`)
   client.channels.cache.get(ch).send(modlogembed).catch(console.log)
