@@ -27,5 +27,6 @@ ${message.author.username} looks sad :(`
 
 exports.help = {
   name: "cry",
-  aliases: ["sad"]
+  aliases: ["sad"],
+  category: "Action"
 };
