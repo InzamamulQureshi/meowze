@@ -13,7 +13,7 @@ const { Database } = require("quickmongo");
 client.db = new Database("mongodb+srv://InzamamulQureshi:inzam786@cluster0.k5wj1.mongodb.net/discord_bots?retryWrites=true&w=majority");
 const app = express();
 const DBL = require("dblapi.js");
-client.dbl = new DBL();
+client.dbl = new DBL("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTU1MTI1MTc5ODAzMjQ0NCIsImJvdCI6dHJ1ZSwiaWF0IjoxNTk2NDI5MDMzfQ.H-bdkKRiTBh5nB6SaKEmGPUr31zHFegQxy7hUGHB0vY", client);
 
 app.get("/", (req, res) => {
 
