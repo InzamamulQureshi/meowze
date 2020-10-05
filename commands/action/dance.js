@@ -5,13 +5,13 @@ const db = require("quick.db")
 
 exports.run = async (client, message, args) => {
   
- let str = `${message.author.username} is happy!
-${message.author.username} has a grin.
-${message.author.username} is smiling :D`
+ let str = `${message.author.username} is dancing!
+${message.author.username} is overjoyed!
+${message.author.username} dances.`
  let string = str.split("\n")
  let title = string[Math.floor(Math.random()*string.length)]
   
-  let wink = await fetch(`https://waifu.pics/api/sfw/happy`).then(res => res.json()).then(body => {
+  let wink = await fetch(`https://waifu.pics/api/sfw/dance`).then(res => res.json()).then(body => {
   
   const embed = new discord.MessageEmbed()
   .setAuthor(title, message.author.avatarURL({dynamic: true}))
@@ -26,6 +26,6 @@ ${message.author.username} is smiling :D`
                                                                                           
 
 exports.help = {
-  name: "smile",
-  aliases: ["happy"]
+  name: "dance",
+  aliases: []
 };
