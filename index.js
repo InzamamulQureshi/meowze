@@ -36,7 +36,7 @@ client.giveawaysManager = new GiveawaysManager(client, {
 });
 
 
-let modules = ["utility", "action", "fun", "moderation", "owner", "giveaways", "economy", "music"]; 
+let modules = ["utility", "action", "fun", "moderation", "owner", "giveaways", "economy"]; 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 
