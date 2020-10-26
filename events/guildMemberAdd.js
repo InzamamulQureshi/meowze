@@ -3,6 +3,17 @@ const { registerFont, createCanvas, loadImage } = require("canvas")
 const Canvas = require("canvas")
 module.exports = async(client, member) => {
   
+let ch = await client.db.get(`modlog_${member.guild.id}`);
+    
+    let modlogembed = new discord.MessageEmbed()
+    .setAuthor("Member Joined", member.user.avatarURL({dynamic: true}))
+    .setDescription(`${member.user} just joined the server, this server now has ${member.guild.members.cache.size} members`)
+    .setTimestamp()
+    .setFooter(`Member ID - ${member.user.id}`)
+    .setTimestamp()
+    .setColor(client.colors.theme)
+    client.channels.cache.get(ch).send(modlogembed).catch(console.log)
+
   let wc = await client.db.get(`wc_${member.guild.id}`)
   
   if(!wc) {
