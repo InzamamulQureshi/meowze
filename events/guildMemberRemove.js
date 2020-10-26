@@ -3,25 +3,25 @@ const { registerFont, createCanvas, loadImage } = require("canvas")
 const Canvas = require("canvas")
 module.exports = async(client, member) => {
   
-  let wc = await client.db.get(`wc_${member.guild.id}`)
+  let lc = await client.db.get(`lc_${member.guild.id}`)
   
-  if(!wc) {
+  if(!lc) {
     return;
   }
   
-  let msg = await client.db.get(`wm_${member.guild.id}`)
-  if(msg === null) msg = `<a:lazowelcome:729598728977252352> Hey! {member}, Welcome to **{serverName}** <a:lazowelcome:729598728977252352>
-<a:diamont:768682519641587753> Hope you will enjoy your stay with us! <a:diamont:768682519641587753>`
+  let msg = await client.db.get(`lm_${member.guild.id}`)
+  if(msg === null) msg = `<a:Romeo:767330477668565002> Goodbye! {memberTag}, It was nice to have you in **{serverName}** <a:Juliet:767330603661000745>
+<a:diamont:768682519641587753> Hope you will enjoyed your stay with us! <a:diamont:768682519641587753>`
   
-  let wm = msg.replace(`{member}`, member)
-  wm = wm.replace(`{memberName}`, member.user.username)
-  wm = wm.replace(`{memberTag}`, member.user.tag)
-  wm = wm.replace(`{memberCount}`, member.guild.members.cache.size)
-  wm = wm.replace(`{serverName}`, member.guild.name)
-  wm = wm.replace(`{:diamond}`, `<a:diamont:768682519641587753>`)
-  wm = wm.replace(`{:welcome}`, `<a:lazowelcome:729598728977252352>`)
-  wm = wm.replace(`{:star}`, `<a:shinystar:768684383082119208>`)
-  wm = wm.replace(`{:verified}`, `<a:verified_white:758541634626387978>`)
+  let lm = msg.replace(`{member}`, member)
+  lm = lm.replace(`{memberName}`, member.user.username)
+  lm = lm.replace(`{memberTag}`, member.user.tag)
+  lm = lm.replace(`{memberCount}`, member.guild.members.cache.size)
+  lm = lm.replace(`{serverName}`, member.guild.name)
+  lm = lm.replace(`{:diamond}`, `<a:diamont:768682519641587753>`)
+  lm = lm.replace(`{:welcome}`, `<a:lazowelcome:729598728977252352>`)
+  lm = lm.replace(`{:star}`, `<a:shinystar:768684383082119208>`)
+  lm = lm.replace(`{:verified}`, `<a:verified_white:758541634626387978>`)
   
   let font = await client.db.get(`font_${member.guild.id}`)
   if(font === null) font = "Neuterous"
@@ -76,7 +76,7 @@ module.exports = async(client, member) => {
   ctx.clip()
   ctx.drawImage(av, 250, 0, 200, 200);
   
-  const attach = new discord.MessageAttachment(canvas.toBuffer(), "welcome.png")
-  client.channels.cache.get(wc).send(wm, attach).catch(console.log)
+  const attach = new discord.MessageAttachment(canvas.toBuffer(), "leave.png")
+  client.channels.cache.get(lc).send(lm, attach).catch(console.log)
   
 }
