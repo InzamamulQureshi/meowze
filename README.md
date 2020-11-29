@@ -9,7 +9,8 @@ Go to [config.json](https://github.com/InzamamulQureshi/meowze/blob/master/confi
 ```json
 {
     "token": "Your Discord Bot Token",
-    "prefix": "prefix here"
+    "d_prefix": "prefix here",
+    "ownerID": "your id here"
 }
 ```
 
