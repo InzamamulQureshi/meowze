@@ -6,6 +6,11 @@ Developer - Qureshi Inzamamul#0833
 ## How to use?
 
 Go to [config.json](https://github.com/InzamamulQureshi/meowze/blob/master/config.json) and add your bot token, your id and prefix
+```json
+{
+    "token": "Your Discord Bot Token",
+    "prefix": "prefix here"
+}
 
 Go to [index.js](https://github.com/InzamamulQureshi/meowze/blob/master/index.js) and add your MongoDB Cluster address.
 
