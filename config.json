@@ -1,8 +1,5 @@
 {
-  "token": "Njk1NTUxMjUxNzk4MDMyNDQ0.Xob0lQ.2Vsf5S6eLvgp3MD7TQyOBdVqhCM",
-  "d_prefix": "m!",
-  "ownerID": "690132996195745872",
-  "staff": ["443296100984684544", "488245609539829781", "637149788994797578", "663759563555733543", "690132996195745872"],
-  "hostedBy": true,
-  "everyoneMention": false
+  "token": "Token here",
+  "d_prefix": "?",
+  "ownerID": "OwnerID here"
 }
