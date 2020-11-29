@@ -11,6 +11,7 @@ Go to [config.json](https://github.com/InzamamulQureshi/meowze/blob/master/confi
     "token": "Your Discord Bot Token",
     "prefix": "prefix here"
 }
+```
 
 Go to [index.js](https://github.com/InzamamulQureshi/meowze/blob/master/index.js) and add your MongoDB Cluster address.
 
