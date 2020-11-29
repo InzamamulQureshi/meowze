@@ -12,8 +12,6 @@ const express = require("express")
 const { Database } = require("quickmongo");
 client.db = new Database("Mongodb cluster address here");
 const app = express();
-const DBL = require("dblapi.js");
-client.dbl = new DBL("Top.gg token here", client);
 
 app.get("/", (req, res) => {
 
