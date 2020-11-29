@@ -15,7 +15,7 @@ Go to [config.json](https://github.com/InzamamulQureshi/meowze/blob/master/confi
 ```
 
 Go to [index.js](https://github.com/InzamamulQureshi/meowze/blob/master/index.js) and add your MongoDB Cluster address.
-```json
+```bash
 const { Database } = require("quickmongo");
 client.db = new Database("Mongodb cluster address here");
 ```
