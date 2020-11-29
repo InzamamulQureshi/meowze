@@ -1,4 +1,4 @@
-## Meowze Bot Official project
+<h1 align="center">Meowze Official Bot codes</h1>
 
 
 Developer - Qureshi Inzamamul#0833
