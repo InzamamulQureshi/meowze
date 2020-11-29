@@ -5,7 +5,7 @@ Developer - Qureshi Inzamamul#0833
 
 ## How to use?
 
-Go to [config.json]() and add your token, your id and prefix
+Go to [config.json](https://github.com/InzamamulQureshi/meowze/blob/master/config.json) and add your bot token, your id and prefix
 
 Go to [index.js](https://github.com/InzamamulQureshi/meowze/blob/master/index.js) and add your MongoDB Cluster address.
 
