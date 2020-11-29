@@ -10,10 +10,10 @@ client.snipe = new Map()
 client.editsnipe = new Map()
 const express = require("express")
 const { Database } = require("quickmongo");
-client.db = new Database("mongodb+srv://InzamamulQureshi:inzam786@cluster0.k5wj1.mongodb.net/discord_bots?retryWrites=true&w=majority");
+client.db = new Database("Mongodb cluster address here");
 const app = express();
 const DBL = require("dblapi.js");
-client.dbl = new DBL("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NTU1MTI1MTc5ODAzMjQ0NCIsImJvdCI6dHJ1ZSwiaWF0IjoxNTk2NDI5MDMzfQ.H-bdkKRiTBh5nB6SaKEmGPUr31zHFegQxy7hUGHB0vY", client);
+client.dbl = new DBL("Top.gg token here", client);
 
 app.get("/", (req, res) => {
 
@@ -22,19 +22,6 @@ res.sendStatus(200)
 });
 
 app.listen(3000)
-
-const { GiveawaysManager } = require('discord-giveaways');
-client.giveawaysManager = new GiveawaysManager(client, {
-    storage: "./giveaways.json",
-    updateCountdownEvery: 5000,
-    default: {
-        botsCanWin: false,
-        exemptPermissions: [ "MANAGE_MESSAGES", "ADMINISTRATOR" ],
-        embedColor: `${client.colors.theme}`,
-        reaction: "🎁" 
-    }
-});
-
 
 let modules = ["utility", "action", "fun", "moderation", "owner", "giveaways", "economy"]; 
 client.commands = new Discord.Collection();
@@ -65,10 +52,5 @@ fs.readdir("./events/", (err, files) => {
         client.on(eventName, event.bind(null, client));
     });
 });
-
-client.on("message", message => {
-  if(message.author.id === "354521975441457163") 
-    message.react("752143274617208973")
-})
 
 client.login(client.config.token)
